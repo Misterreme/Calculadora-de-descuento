@@ -15,9 +15,14 @@ function validateInput(event) {
     }
 }
 
+// function calculateDiscount(price, discount) {
+//     const priceWithDiscount = (price * discount) / 100;
+//     return priceWithDiscount
+// }
+
 function calculateDiscount(price, discount) {
-    const priceWithDiscount = (price * discount) / 100;
-    return priceWithDiscount
+    const finalPrice = price * ((100 - discount) / 100);
+    return finalPrice;
 }
 
 calculateButton.addEventListener("click", (event) => {

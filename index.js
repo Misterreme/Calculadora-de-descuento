@@ -3,6 +3,8 @@ const originalPriceInput = document.getElementById("original-price-input");
 const discountPercentageInput = document.getElementById("discount-percentage-input");
 const priceWithDiscountInput = document.getElementById("price-with-discount-input");
 const calculateButton = document.getElementById("calculate-button");
+const originalCurrency = document.querySelector(".original-currency");
+const totalCurrency = document.querySelector(".total-currency");
 
 
 originalPriceInput.addEventListener("blur", validateInput);
@@ -31,5 +33,7 @@ calculateButton.addEventListener("click", (event) => {
     const discount = discountPercentageInput.value;
     const finalPrice = calculateDiscount(price, discount);
     priceWithDiscountInput.value = finalPrice;
+    
+    totalCurrency.innerText = originalCurrency.value;
 })
 

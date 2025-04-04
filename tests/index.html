@@ -14,12 +14,61 @@
     <div class="main-container">
         <div class="calculator-container">
             <h1 class="title">Calcular porcentaje de descuento (%)</h1>
+            <button class="theme-button"></button>
 
             <form action="/" class="calculator-form">
                 <div class="input-container">
                     <label for="original-price-input" class="form-label original-price">Precio Original <span>(sin descuento)</span></label>
-                    <span class="original-currency">DOP</span>
-                    <input class="form-input" id="original-price-input" type="number" maxlength="39">
+
+                    <select name="Currency-Select" id="select-currency" class="select-currency">
+                        <button><selectedcontent class="selected-content"></selectedcontent></button>
+
+                        <option value="DOP">
+                            <div select-content>
+                                <img src="./assets/images/DO.svg" alt="DO Currency" class="img-currency">
+                                <p>
+                                    <span class="abb">DOP</span>
+                                    <span class="full-name">Dominican peso</span>
+                                </p>
+                                <p class="symbol">RD$</p>
+                            </div>
+                        </option>
+                        <option value="EUR">
+                            <div select-content>
+                                <img src="./assets/images/UE.svg" alt="EUR Currency" class="img-currency">
+                                <p>
+                                    <span class="abb">EUR</span>
+                                    <span class="full-name">Euro</span>
+                                </p>
+                                <p class="symbol">€</p>
+                            </div>
+                        </option>
+                        <option value="USD">
+                            <div select-content>
+                                <img src="./assets/images/EEUU.svg" alt="USD Currency" class="img-currency">
+                                <p>
+                                    <span class="abb">USD</span>
+                                    <span class="full-name">United States Dolar</span>
+                                </p>
+                                <p class="symbol">$</p>
+                            </div>
+                        </option>
+                        <option value="GBP">
+                            <div select-content>
+                                <img src="./assets/images/UK.svg" alt="GBP Currency" class="img-currency">
+                                <p>
+                                    <span class="abb">GBP</span>
+                                    <span class="full-name">Great British Pound</span>
+                                </p>
+                                <p class="symbol">£</p>
+                            </div>
+                        </option>
+                    </select>
+
+                    <div class="doble-input-container">
+                        <input type="text" class="currency-input" id="currency-input" disabled>
+                        <input class="form-input" id="original-price-input" type="number" maxlength="39"> 
+                    </div>
                 </div>
 
                 <div class="input-container">
@@ -31,13 +80,60 @@
 
                 <div class="input-container">
                     <label for="price-with-discount-input" class="form-label">Precio con descuento</label>
-                    <span class="total-currency">DOP</span>
-                    <input class="form-input" id="price-with-discount-input" type="text">
+                    <select name="Currency-Select" id="output-select-currency" class="select-currency-output">
+                        <button><selectedcontent class="selected-content"></selectedcontent></button>
+
+                        <option value="DOP">
+                            <div select-content>
+                                <img src="./assets/images/DO.svg" alt="DO Currency" class="img-currency">
+                                <p>
+                                    <span class="abb">DOP</span>
+                                    <span class="full-name">Dominican peso</span>
+                                </p>
+                                <p class="symbol">RD$</p>
+                            </div>
+                        </option>
+                        <option value="EUR">
+                            <div select-content>
+                                <img src="./assets/images/UE.svg" alt="EUR Currency" class="img-currency">
+                                <p>
+                                    <span class="abb">EUR</span>
+                                    <span class="full-name">Euro</span>
+                                </p>
+                                <p class="symbol">€</p>
+                            </div>
+                        </option>
+                        <option value="USD">
+                            <div select-content>
+                                <img src="./assets/images/EEUU.svg" alt="USD Currency" class="img-currency">
+                                <p>
+                                    <span class="abb">USD</span>
+                                    <span class="full-name">United States Dolar</span>
+                                </p>
+                                <p class="symbol">$</p>
+                            </div>
+                        </option>
+                        <option value="GBP">
+                            <div select-content>
+                                <img src="./assets/images/UK.svg" alt="GBP Currency" class="img-currency">
+                                <p>
+                                    <span class="abb">GBP</span>
+                                    <span class="full-name">Great British Pound</span>
+                                </p>
+                                <p class="symbol">£</p>
+                            </div>
+                        </option>
+                    </select>
+
+                    <div class="doble-input-container">
+                        <input type="text" class="currency-input" id="currency-input" disabled>
+                        <input class="form-input" id="price-with-discount-input" type="text">
+                    </div>
                 </div>
             </form>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="./index.test.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/autonumeric@4.5.4"></script>
     <script>
         new AutoNumeric("#price-with-discount-input", { 

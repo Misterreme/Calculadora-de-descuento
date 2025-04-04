@@ -34,6 +34,6 @@ calculateButton.addEventListener("click", (event) => {
     const finalPrice = calculateDiscount(price, discount);
     priceWithDiscountInput.value = finalPrice;
     
-    totalCurrency.innerText = originalCurrency.value;
+    totalCurrency.innerText = originalCurrency.innerText;
 })
 

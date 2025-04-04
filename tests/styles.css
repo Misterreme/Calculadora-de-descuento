@@ -24,7 +24,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: end;
-    background-color: rgba(0, 0, 0, 0.219);
+    background-color: light-dark(rgba(0, 0, 0, 0.219), rgba(0, 0, 0, 0.267));
 }
 
 .navbar div {
